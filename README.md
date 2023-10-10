@@ -40,7 +40,7 @@ Welcome to the Telegram Mini App / Bot that allows you to play chess with your f
 
 # About
 
-![photo_2023-10-08_02-34-21.jpg](README%20md%20-%20frontend%20a966301eb1934c47aa88784633dd0f76/photo_2023-10-08_02-34-21.jpg)
+![photo_2023-10-08_02-34-21.jpg](https://github.com/DasAnonas/chess-mini-app/blob/main/frontend/public/screenshot.jpg?raw=true)
 
 This is a simple chess game implementation in Telegram Mini Apps ecosystem. The application can:
 
