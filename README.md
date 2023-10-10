@@ -1,10 +1,42 @@
-# README.md - frontend
-
 # Chess Telegram
 
 Welcome to the Telegram Mini App / Bot that allows you to play chess with your friends or with bot itself inside the Telegram! The application is made using TypeScript, [Vue 3](https://vuejs.org/guide/introduction.html), [Telegraf.js](https://telegraf.js.org), [Vite](https://vitejs.dev/guide/), [Chess.js](https://github.com/jhlywa/chess.js/blob/master/README.md) and [Howler](https://github.com/goldfire/howler.js#documentation). You may check it out here: @[ChessTgOnlineBot](https://t.me/ChessTgOnlineBot) 
 
 # Table of Contents
+
+- [Chess Telegram](https://github.com/DasAnonas/chess-mini-app/#chess-telegram)
+- [Table of Contents](https://github.com/DasAnonas/chess-mini-app/#table-of-contents)
+- [About](https://github.com/DasAnonas/chess-mini-app/#about)
+- [Quick Start Guide](https://github.com/DasAnonas/chess-mini-app/#quick-start-guide)
+    - [Basics](https://github.com/DasAnonas/chess-mini-app/#basics)
+    - [Front-end application setup](https://github.com/DasAnonas/chess-mini-app/#front-end-application-setup)
+    - [Back-end application setup](https://github.com/DasAnonas/chess-mini-app/#back-end-application-setup)
+- [Setting up the production environment](https://github.com/DasAnonas/chess-mini-app/#setting-up-the-production-environment)
+    - [Front-end application setup](https://github.com/DasAnonas/chess-mini-app/#front-end-application-setup-1)
+    - [Back-end application setup](https://github.com/DasAnonas/chess-mini-app/#back-end-application-setup-1)
+- [Front-end application structure](https://github.com/DasAnonas/chess-mini-app/#front-end-application-structure)
+    - [UI components structure](https://github.com/DasAnonas/chess-mini-app/#ui-components-structure)
+        - [Buttons](https://github.com/DasAnonas/chess-mini-app/#buttons)
+        - [Modals](https://github.com/DasAnonas/chess-mini-app/#modals)
+        - [Layouts](https://github.com/DasAnonas/chess-mini-app/#layouts)
+    - [Business logics structure](https://github.com/DasAnonas/chess-mini-app/#business-logics-structure)
+        - [Game Master](https://github.com/DasAnonas/chess-mini-app/#game-master)
+        - [WebSocket client](https://github.com/DasAnonas/chess-mini-app/#websocket-client)
+        - [User Actions](https://github.com/DasAnonas/chess-mini-app/#user-actions)
+        - [WebSocket Actions](https://github.com/DasAnonas/chess-mini-app/#websocket-actions)
+        - [Bot AI](https://github.com/DasAnonas/chess-mini-app/#bot-ai)
+        - [Cloud Storage](https://github.com/DasAnonas/chess-mini-app/#cloud-storage)
+        - [Locale](https://github.com/DasAnonas/chess-mini-app/#locale)
+        - [Sound Engine](https://github.com/DasAnonas/chess-mini-app/#sound-engine)
+- [Back-end application structure](https://github.com/DasAnonas/chess-mini-app/#back-end-application-structure)
+    - [Telegram Bot](https://github.com/DasAnonas/chess-mini-app/#telegram-bot)
+    - [Game server](https://github.com/DasAnonas/chess-mini-app/#game-server)
+        - [websocket-manager/index.ts](https://github.com/DasAnonas/chess-mini-app/#websocket-managerindexts)
+        - [game-manager/base-game-wrap.ts](https://github.com/DasAnonas/chess-mini-app/#game-managerbase-game-wrapts)
+        - [game-manager/game-client.ts](https://github.com/DasAnonas/chess-mini-app/#game-managergame-clientts)
+        - [game-manager/game-wrap.ts](https://github.com/DasAnonas/chess-mini-app/#game-managergame-wrapts)
+        - [game-manager/index.ts](https://github.com/DasAnonas/chess-mini-app/#game-managerindexts)
+- [Credits](https://github.com/DasAnonas/chess-mini-app/#credits)
 
 # About
 
