@@ -54,13 +54,13 @@ The following instructions are applicable for setting up the development environ
 
 ## Basics
 
-Clone the repository for the frontend and backend layers of the application:
+Clone the repository with the frontend and backend layers of the application:
 
 ```bash
 git clone https://github.com/DasAnonas/chess-mini-app
 ```
 
-Make sure that [Node.js](https://nodejs.org/en) is installed on your system and install the dependencies for each repository (use `cd frontend` and `cd ../backend` to navigate between the folders):
+Make sure that [Node.js](https://nodejs.org/en) is installed on your system and install the dependencies for each part of the application (use `cd frontend` and `cd ../backend` to navigate between the folders):
 
 ```bash
 npm install
