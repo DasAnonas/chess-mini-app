@@ -24,7 +24,7 @@ class UserActionsSingle {
 		});
 	}
 
-	async onDrop(dropEvt) {
+	onDrop(dropEvt) {
 		let move;
 		try {
 			move = this.gm.engine.move({
@@ -41,8 +41,8 @@ class UserActionsSingle {
 			this.gm.boardState.canMove = false;
 			this.gm.boardState.isMyMove = false;
 			this.gm.boardState.statusLabel = this.gm.locale.$opponentMove;
-			await this.cloudStorage.SaveGame();
-			const isOver = await this.move(dropEvt.source, dropEvt.target);
+			this.cloudStorage.SaveGame();
+			const isOver = this.move(dropEvt.source, dropEvt.target);
 			if (!isOver)
 				window.setTimeout(() => this.runOpponentMove(), 200);	
 		} else 
@@ -53,7 +53,7 @@ class UserActionsSingle {
 		this.gm.board.position(this.gm.engine.fen())
 	}
 
-	async move() {
+	move() {
 		this.gm.soundEngine.Move();
 		this.gm.board.fen(this.gm.engine.fen());
 		const isOver = this.checkEnding();
@@ -72,9 +72,9 @@ class UserActionsSingle {
 		this.gm.soundEngine.NotifyMove();
     }
 
-    async checkEnding() {
+    checkEnding() {
         if (this.gm.engine.isCheckmate()) {
-			await this.finishGame(this.gm.isMyMove ? 'win' : 'lose');
+			this.finishGame(this.gm.isMyMove ? 'win' : 'lose');
             return true;
         }
           if (this.gm.engine.isDraw() || this.gm.engine.isInsufficientMaterial() || this.gm.engine.isStalemate() || this.gm.engine.isThreefoldRepetition()) {
@@ -132,13 +132,13 @@ class UserActionsSingle {
 		this.gm.boardState.showSurrender = true;
 	}
 	
-	async surrender() {
-		await this.finishGame('lose').bind(this);
+	surrender() {
+		this.finishGame('lose').bind(this);
 	}
 	
-	async finishGame(status) {
+	finishGame(status) {
 		this.gm.wsActions.finishGame({status});
-		await this.cloudStorage.DeleteGame();
+		this.cloudStorage.DeleteGame();
 		this.gm.ws.send({action: 'endGame'});
 	}
 
