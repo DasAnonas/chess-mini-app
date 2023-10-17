@@ -167,6 +167,7 @@ class MainScene extends BaseScene {
 			await ctx.answerCbQuery();
 			await this.bot.EditOrReply(ctx, 'Welcome to Chess!', Markup.inlineKeyboard([
 				[Markup.button.callback('♟️ Play chess', 'privateGame')],
+				[Markup.button.callback('🤖 Play with Bot', 'createSingleGame')],
 				[Markup.button.callback('🏆 My games', 'myGames')],
 				[Markup.button.callback('❓ How to use', 'about')],
 			]))
